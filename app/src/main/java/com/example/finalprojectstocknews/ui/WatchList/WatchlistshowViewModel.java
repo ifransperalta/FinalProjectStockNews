@@ -1,16 +1,16 @@
-package com.example.finalprojectstocknews.ui.slideshow;
+package com.example.finalprojectstocknews.ui.WatchList;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class SlideshowViewModel extends ViewModel {
+public class WatchlistshowViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public SlideshowViewModel() {
+    public WatchlistshowViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("Gainers and Losers");
+        mText.setValue("Watchlist");
     }
 
     public LiveData<String> getText() {
