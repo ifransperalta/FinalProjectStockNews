@@ -11,4 +11,6 @@
     <string name="menu_gallery">Search Stocks News</string>
     <string name="menu_slideshow">Gainers and Losers</string>
     <string name="menu_watchlist">Watchlist</string>
+
+    <string name="watchlistName">Add Ticker To Watchlist</string>
 </resources>
