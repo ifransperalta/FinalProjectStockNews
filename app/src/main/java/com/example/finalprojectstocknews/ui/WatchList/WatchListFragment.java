@@ -31,7 +31,6 @@ public class WatchListFragment extends Fragment implements View.OnClickListener{
     ArrayAdapter tickerArrayAdapter;
     DatabaseOP databaseop;
 
-
     private WatchlistshowViewModel watchlisthowViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -73,9 +72,7 @@ public class WatchListFragment extends Fragment implements View.OnClickListener{
         }
     }
 
-    public void onItem(){
-
-    }
+    public void onItem(){ }
 
     private void getDataList(DatabaseOP databaseop2) {
         tickerArrayAdapter = new ArrayAdapter<TickerModel>(getActivity(), android.R.layout.simple_list_item_1, databaseop2.getEveryone());
