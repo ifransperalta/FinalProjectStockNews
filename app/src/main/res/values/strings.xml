@@ -13,4 +13,10 @@
     <string name="menu_watchlist">Watchlist</string>
 
     <string name="watchlistName">Add Ticker To Watchlist</string>
+    <string name="news_window">List of News</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
 </resources>

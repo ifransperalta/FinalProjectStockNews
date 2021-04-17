@@ -1,6 +1,6 @@
 package com.example.finalprojectstocknews.ui.gallery;
 
-class SearchReportModel {
+public class SearchReportModel {
     private String id;
     private String type;
     private String sectionId;
