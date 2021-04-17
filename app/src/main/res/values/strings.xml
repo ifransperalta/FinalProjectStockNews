@@ -7,10 +7,10 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Add To Watchlist</string>
 
-    <string name="menu_home">Latest Stocks News</string>
-    <string name="menu_gallery">Search Stocks News</string>
-    <string name="menu_slideshow">Gainers and Losers</string>
-    <string name="menu_watchlist">Watchlist</string>
+    <string name="menu_home">News By Watchlist</string>
+    <string name="menu_gallery">Search News By Ticker</string>
+    <string name="menu_slideshow">Latest Stock Market News</string>
+    <string name="menu_watchlist">My Watchlist</string>
 
     <string name="watchlistName">Add Ticker To Watchlist</string>
     <string name="news_window">List of News</string>

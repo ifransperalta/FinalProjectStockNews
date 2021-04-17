@@ -14,8 +14,7 @@
         android:theme="@style/Theme.FinalProjectStockNews">
         <activity
             android:name=".NewsWindow"
-            android:label="@string/news_window"
-            android:theme="@style/Theme.FinalProjectStockNews.NoActionBar">
+            android:label="@string/news_window">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
