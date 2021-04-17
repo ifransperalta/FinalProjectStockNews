@@ -62,7 +62,7 @@ public class WatchListFragment extends Fragment implements View.OnClickListener{
         switch(v.getId()){
             case R.id.btAddTicker:
                 TickerModel tickerData = new TickerModel( 1, et_name.getText().toString());
-                Toast.makeText( getActivity(), "Added To Watchlist" + et_name.getText().toString(), Toast.LENGTH_SHORT).show();
+                Toast.makeText( getActivity(), "New Ticker Added To Watchlist: " + et_name.getText().toString(), Toast.LENGTH_SHORT).show();
                 DatabaseOP databaseop = new DatabaseOP( getActivity());
                 boolean success = databaseop.addOne(tickerData);
                 getDataList(databaseop);

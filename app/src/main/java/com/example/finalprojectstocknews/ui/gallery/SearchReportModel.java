@@ -30,9 +30,8 @@ public class SearchReportModel {
     @Override
     public String toString() {
 
-        return "Result" +
-                ", webTitle='" + webTitle + '\'' +
-                ", webUrl='" + webUrl + '\'';
+        return  "\n" + sectionName + "\n\n" +
+                "" + webTitle + "\n";
 
 /*      return "Result{" +
                 "type='" + type + '\'' +

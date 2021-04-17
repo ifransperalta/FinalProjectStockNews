@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:gravity="center_horizontal"
         tools:layout_editor_absoluteX="159dp"
         tools:layout_editor_absoluteY="16dp">
 
@@ -17,25 +18,40 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:textSize="9pt"
-            android:paddingTop="20dp"
-            android:paddingLeft="15dp"
             android:ems="10"
-            android:text="Add a stock ticker to your watchlist" />
+            android:paddingLeft="15dp"
+            android:paddingTop="20dp"
+            android:text="Add A Stock To My Watchlist"
+            android:textSize="6pt" />
 
         <EditText
             android:id="@+id/et_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:hint="Enter a Stock Ticker"
+            android:inputType="textPersonName"
             android:padding="15dp"
-            android:inputType="textPersonName" />
+            android:textSize="8pt"
+            android:layout_marginBottom="15dp" />
 
         <Button
             android:id="@+id/btAddTicker"
-            android:layout_width="match_parent"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="35dp"
             android:padding="15dp"
-            android:text="Add To Watchlist" />
+            android:text="Save To Watchlist"
+            android:textSize="6pt" />
+
+        <TextView
+            android:id="@+id/deleteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:paddingLeft="15dp"
+            android:paddingTop="5dp"
+            android:text="Click a ticker to delete from your watchlist"
+            android:textSize="5pt"
+            app:layout_constraintTop_toBottomOf="@+id/btAddTicker" />
 
         <ListView
             android:id="@+id/lv_customerList"
@@ -44,7 +60,7 @@
             android:layout_marginTop="25dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button" />
+            app:layout_constraintTop_toBottomOf="@+id/deleteTextView" />
 
     </LinearLayout>
 

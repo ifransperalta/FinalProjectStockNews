@@ -1,5 +1,6 @@
 package com.example.finalprojectstocknews;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import androidx.annotation.NonNull;
@@ -58,9 +59,11 @@ public class NewsWindow extends AppCompatActivity {
     ListView stockNews;
 
     private ProgressBar progress;
+    private Toolbar toolbar;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_news_window);
         ticker = (String) getIntent().getSerializableExtra("ticker");
 
@@ -68,11 +71,13 @@ public class NewsWindow extends AppCompatActivity {
         progress.setVisibility(View.VISIBLE);
         progress.setProgress(0);
 
+        setTitle("Latest " + ticker + " Stock News");
+
         NewsWindowAsync query = new NewsWindowAsync();
         query.execute();
     }
 
-    private class NewsWindowAsync extends AsyncTask<String, Integer, String> {
+    public class NewsWindowAsync extends AsyncTask<String, Integer, String> {
 
         int count =1;
 
