@@ -42,7 +42,7 @@ public class SearchStockDataServices {
 
         List<SearchReportModel> searchReportModels = new ArrayList<>();
         String url = QUERY_FOR_NAME_ID + stockTicker;
-        ///Toast.makeText(context, "Return Value Test" + url, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(context, url, Toast.LENGTH_SHORT).show();
 
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
             @Override
