@@ -27,6 +27,13 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This class that will save watchlist to database
+ *
+ * @author Ian Peralta
+ *
+ */
+
 public class DatabaseOP extends SQLiteOpenHelper{
 
     public static final String CUSTOMER_TABLE = "STOCKTICKER";

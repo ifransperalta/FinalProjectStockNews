@@ -6,6 +6,13 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
 
+/**
+ * SearchSingleton
+ *
+ * @author Ian Peralta
+ *
+ */
+
 public class SearchSingleton {
     private static SearchSingleton instance;
     private RequestQueue requestQueue;
