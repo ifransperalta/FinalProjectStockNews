@@ -1,3 +1,8 @@
+/**
+ * Copyright (c) 2021, Android Final Project
+ *
+*/
+
 package com.example.finalprojectstocknews.ui.gallery;
 
 import android.net.wifi.p2p.WifiP2pManager;
@@ -25,6 +30,13 @@ import com.example.finalprojectstocknews.TickerModel;
 
 import java.util.List;
 
+/**
+ * This class contains the main frament loader for stock news search
+ *
+ * @author Ian Peralta
+ *
+*/
+
 public class GalleryFragment extends Fragment {
 
     private GalleryViewModel galleryViewModel;
@@ -34,6 +46,10 @@ public class GalleryFragment extends Fragment {
     ListView searchTickerNewsList;
     //ArrayAdapter tickerSearchNewsAdapter;
 
+    /**
+     *  This sections loads the app for stock news search
+     *  * @return
+     */
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         galleryViewModel = new ViewModelProvider(this).get(GalleryViewModel.class);
         View view = inflater.inflate(R.layout.fragment_gallery, container, false);

@@ -16,6 +16,15 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * SearchStockDataServices
+ * This class is the main driver of data building. It will connect to https api to get a json format data.
+ * In this section to process the data I am using a built in library called Volley.
+ *
+ * @author Ian Peralta
+ *
+ */
+
 public class SearchStockDataServices {
     private static final String QUERY_FOR_NAME_ID = "https://content.guardianapis.com/search?api-key=1fb36b70-1588-4259-b703-2570ea1fac6a&q=";
 
@@ -38,6 +47,10 @@ public class SearchStockDataServices {
         void onReponse(List<SearchReportModel> weatherReportModel);
     }
 
+    /**
+     * A callback function that will retrieve data from API
+     *
+     */
     public void searchNewsResult(String stockTicker, SearchByIdResponse searchByIdResponse) {
 
         List<SearchReportModel> searchReportModels = new ArrayList<>();

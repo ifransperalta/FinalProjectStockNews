@@ -23,6 +23,13 @@ import com.example.finalprojectstocknews.ui.gallery.SearchStockDataServices;
 
 import java.util.List;
 
+/**
+ * This class contains the home fragment loader for stock news
+ *
+ * @author Ian Peralta
+ *
+ */
+
 public class HomeFragment extends Fragment {
 
     private HomeViewModel homeViewModel;

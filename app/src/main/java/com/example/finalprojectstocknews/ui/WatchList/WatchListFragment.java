@@ -1,6 +1,10 @@
+
+
 package com.example.finalprojectstocknews.ui.WatchList;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,6 +26,13 @@ import androidx.lifecycle.ViewModelProvider;
 import com.example.finalprojectstocknews.DatabaseOP;
 import com.example.finalprojectstocknews.R;
 import com.example.finalprojectstocknews.TickerModel;
+
+/**
+ * This class contains fragment to save watchlist
+ *
+ * @author Ian Peralta
+ *
+ */
 
 public class WatchListFragment extends Fragment implements View.OnClickListener{
 
@@ -48,10 +59,26 @@ public class WatchListFragment extends Fragment implements View.OnClickListener{
         tickerList.setOnItemClickListener( new AdapterView.OnItemClickListener(){
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                TickerModel clickedItem = (TickerModel) parent.getItemAtPosition(position);
-                databaseop.DeleteEntry(clickedItem);
-                getDataList(databaseop);
-                Toast.makeText(getActivity(), "Deleted " + clickedItem, Toast.LENGTH_SHORT).show();
+
+                AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
+                alert.setTitle("Delete Ticker");
+                alert.setMessage("Are you sure you want to delete?");
+                alert.setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        // continue with delete
+                        TickerModel clickedItem = (TickerModel) parent.getItemAtPosition(position);
+                        databaseop.DeleteEntry(clickedItem);
+                        getDataList(databaseop);
+                        Toast.makeText(getActivity(), "Deleted " + clickedItem, Toast.LENGTH_SHORT).show();
+                    }
+                });
+                alert.setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        // close dialog
+                        dialog.cancel();
+                    }
+                });
+                alert.show();
             }
         });
         return view;

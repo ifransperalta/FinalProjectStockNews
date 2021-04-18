@@ -1,4 +1,16 @@
+/**
+ * Copyright (c) 2021, Android Final Project
+ */
+
 package com.example.finalprojectstocknews.ui.gallery;
+
+/**
+ * Class Search Report Model
+ * This class is a constructor to build data request. It will gather all data then output it to toString method
+ *
+ * @author Ian Peralta
+ *
+ */
 
 public class SearchReportModel {
     private String id;
@@ -13,6 +25,10 @@ public class SearchReportModel {
     private String pillarId;
     private String pillarName;
 
+    /**
+     * Constructor
+     *
+     */
     public SearchReportModel(String id, String type, String sectionId, String sectionName, String webPublicationDate, String webTitle, String webUrl, String apiUrl, Boolean isHosted, String pillarId, String pillarName) {
         this.id = id;
         this.type = type;
@@ -27,6 +43,10 @@ public class SearchReportModel {
         this.pillarName = pillarName;
     }
 
+    /**
+     * This method will output all the data request
+     *
+     */
     @Override
     public String toString() {
 

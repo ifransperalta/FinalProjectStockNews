@@ -26,6 +26,13 @@ import com.example.finalprojectstocknews.ui.home.NewWindowModel;
 
 import java.util.List;
 
+/**
+ * This class contains fragment to loader for stock market news
+ *
+ * @author Ian Peralta
+ *
+*/
+
 public class SlideshowFragment extends Fragment {
 
     private SlideshowViewModel slideshowViewModel;
@@ -56,6 +63,10 @@ public class SlideshowFragment extends Fragment {
         return root;
     }
 
+    /**
+     * Async progressbar and loads data from SearchStockDataServices class
+     *
+     */
     private class NewsWindowAsync extends AsyncTask<String, Integer, String> {
 
         int count =1;
